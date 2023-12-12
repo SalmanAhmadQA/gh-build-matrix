@@ -4,7 +4,7 @@ N=$1
 # by default N is 1
 N=${N:-1}
 
-INDEX=0
+INDEX=1
 
 OUTPUT='{"containers":['
 
@@ -12,9 +12,9 @@ while [ $INDEX -lt $N ]
 do
   if [ $INDEX -lt $(($N-1)) ]
   then
-    OUTPUT+="$(($INDEX+1)), "
+    OUTPUT+="$(($INDEX)), "
   else
-    OUTPUT+="$(($INDEX+1))"
+    OUTPUT+="$(($INDEX))"
   fi
 
   INDEX=$(($INDEX+1))
